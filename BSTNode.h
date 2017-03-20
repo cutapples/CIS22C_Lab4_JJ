@@ -1,23 +1,13 @@
-#ifndef BSTNode_hpp
-#define BSTNode_hpp
-
-#include <stdio.h>
-
-#ifndef NODE_H
-#define NODE_H
-#include <cstddef>
+#ifndef BSTNODE_H
+#define BSTNODE_H
 
 template <class T>
-class Node
-{
+class BSTNode {
 public:
-    T data;
-    Node * left;
-    Node * right;
-    Node() : left(NULL), right(NULL) {}
-    Node(T newData) : data(newData), left(NULL), right(NULL) {}
+	T* data;
+	BSTNode<T>* leftChild;
+	BSTNode<T>* rightChild;
+	BSTNode(T& data) { this->data = &data; leftChild = nullptr; rightChild = nullptr; };
 };
 
-#endif
-
-#endif /* BSTNode_hpp */
+#endif BSTNODE_H
